@@ -14,6 +14,7 @@ module Jekyll
     end
 
     def date_to_xmlschema(date)
+      date = Time.parse(date) if String === date
       date.xmlschema
     end
 
